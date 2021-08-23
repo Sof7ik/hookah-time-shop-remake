@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    margin-top: 24px;
+}
+
+img
+{
+    display: block;
+}
+
+.container-1440
+{
+    padding: 0 15px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.shop-address-name
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+
+    margin-bottom: 24px;
+}
+
+a.back-to-all-contacts
+{
+    display: block;
+
+    position: relative;
+
+    padding-left: calc(21px + 13px);
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+
+    text-decoration: none;
+
+    margin-bottom: 24px;
+
+    outline: none;
+}
+
+a.back-to-all-contacts::before
+{
+    content: '';
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 13px;
+    height: 21px;
+
+    background-image: url('../img/back-icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    transition: left .3s;
+}
+
+@keyframes arrowToLeft
+{
+    from {
+        left: 0;
+    }
+    50% {
+        left: -10px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+a.back-to-all-contacts:hover::before,
+a.back-to-all-contacts:focus::before
+{
+    /*left: -10px;*/
+    animation-duration: .7s;
+    animation-name: arrowToLeft;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.yandex-maps
+{
+    width: 100%;
+    height: 529px;
+
+    border: 3px solid #CDA236;
+}
+
+.yandex-maps img
+{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.detail-shop-address
+{
+    margin: 45px 0 31px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+}
+
+.description-address-card
+{
+    background-color: #343434;
+    padding: 39px 34px 35px;
+
+    display: flex;
+    flex-flow:  row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* контейнер для телефона и социальных ссылок */
+.telephone-social-wrapper
+{
+    margin-right: 87px;
+}
+
+/* телефон магазина */
+.shop-phone
+{
+    text-decoration: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 49px;
+
+    color: #FFFFFF;
+}
+
+/* список соц сетей */
+.description-address-card .social-list
+{
+    list-style-type: none;
+
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(min-content, max-content));
+}
+
+.description-address-card .social-list .social-item a
+{
+    display: block;
+    padding: 10px;
+    border-radius: 100%;
+    background-color: transparent;
+
+    transition: background-color .4s;
+}
+
+.description-address-card .social-list .social-item a:hover,
+.description-address-card .social-list .social-item a:focus
+{
+    background-color: #CDA236;
+    outline: none;
+}
+
+.description-address-card .social-list .social-item a img
+{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* список станций метро */
+.metro-wrapper
+{
+    list-style-type: none;
+
+    margin-right: 179px;
+}
+
+.metro-wrapper .metro-item
+{
+    margin-bottom: 6px;
+}
+.metro-wrapper .metro-item:last-child
+{
+    margin-bottom: 0;
+}
+
+.metro-address
+{
+    position: relative;
+
+    padding-left: calc(20px + 7px);
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+.metro-address::before
+{
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 12px;
+
+    background-image: url('../img/metro-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.opened-time
+{
+    padding-left: calc(20px + 7px);
+
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
+    margin-bottom: 7px;
+}
+
+.opened-time::before
+{
+    content: '';
+
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-image: url('../img/clock.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.shop-mail
+{
+    text-decoration: none;
+    padding-left: calc(20px + 7px);
+    
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
+    transition: color .3s;
+}
+
+.shop-mail:hover,
+.shop-mail:focus
+{
+    color: #0000EE;
+}
+
+.shop-mail::before
+{
+    content: '';
+
+    width: 20px;
+    height: 14px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-image: url('../img/letter.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.payment-methods
+{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(min-content, max-content));
+    grid-gap: 3px;
+
+    margin-top: 64px;
+}
+
+.shop-photos
+{
+    margin: 46px 0;
+
+    padding: 38px 0;
+
+    background-color: #CDA236;
+}
+
+.shop-photos .swiper-wrapper
+{
+    /*width: 1157px;*/
+}
+
+.shop-photos .swiper-wrapper .swiper-slide img
+{
+    border: 3px solid #fff;
+    margin: 0 auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next
+{
+    margin-top: 0;
+    transform: translateY(-50%);
+
+    width: 54px;
+    height: 87px;
+
+    background-image: url('../img/slider/slider-arrow.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.swiper-button-next
+{
+    transform: rotate(180deg) translateY(50%);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after
+{
+    display: none;
+}
+
+.how-to-reach
+{
+    margin-bottom: 50px;
+}
+
+.how-to-reach__title
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+
+    margin-bottom: 29px;
+}
+
+.how-to-reach__text
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}

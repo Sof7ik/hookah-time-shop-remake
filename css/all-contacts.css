@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*, *::after, *::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main
+{
+    margin-top: 24px;
+}
+
+img
+{
+    display: block;
+}
+
+.container-1440
+{
+    padding: 0 15px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.all-addresses__title
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+
+    margin-bottom: 28px;
+}
+
+.yandex-maps
+{
+    width: 100%;
+    height: 529px;
+
+    border: 3px solid #CDA236;
+}
+
+.yandex-maps img
+{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.all-shops
+{
+    margin-top: 45px;
+}
+
+.all-shops__title
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+
+    margin-bottom: 50px;
+}
+
+.shops-list
+{
+    list-style-type: none;
+}
+
+.shops-list .shop-item
+{
+    position: relative;
+
+    margin-bottom: 25px;
+    background-color: #343434;
+    border-radius: 40px;
+    overflow: hidden;
+
+    padding: 43px 30px 55px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    transition: background-color .3s;
+}
+.shops-list .shop-item:last-child
+{
+    margin-bottom: 0;
+}
+
+.shops-list .shop-item:hover
+{
+    background-color: #CDA236;
+}
+
+.shops-list .shop-item a
+{
+    text-decoration: none;
+}
+
+.shop-avatar
+{
+    width: 275px;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 100%;
+
+    margin-right: 56px;
+}
+
+.shop-address
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 127.19%;
+
+    letter-spacing: -0.015em;
+
+    color: #FFFFFF;
+}
+
+.shop-address a
+{
+    color: inherit;
+}
+
+.shop-address a::before
+{
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    /*background-color: red;*/
+}
+
+.shop-address span
+{
+    display: block;
+}
+
+.times-metro
+{
+    margin-top: 40px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    max-width: 700px;
+}
+
+/* список станций метро */
+.metro-wrapper
+{
+    list-style-type: none;
+
+    margin-right: 179px;
+}
+
+.metro-wrapper .metro-item
+{
+    margin-bottom: 6px;
+}
+.metro-wrapper .metro-item:last-child
+{
+    margin-bottom: 0;
+}
+
+.metro-address
+{
+    position: relative;
+
+    padding-left: calc(20px + 7px);
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+.metro-address::before
+{
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 12px;
+
+    background-image: url('../img/metro-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.opened-time
+{
+    padding-left: calc(20px + 7px);
+
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
+    margin-bottom: 7px;
+}
+
+.opened-time::before
+{
+    content: '';
+
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-image: url('../img/clock.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.shop-mail
+{
+    text-decoration: none;
+    padding-left: calc(20px + 7px);
+
+    position: relative;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+
+    transition: color .3s;
+}
+
+.shop-mail:hover,
+.shop-mail:focus
+{
+    color: #0000EE;
+}
+
+.shop-mail::before {
+    content: '';
+
+    width: 20px;
+    height: 14px;
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-image: url('../img/letter.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+a.shop-tel
+{
+    display: block;
+    margin-top: 42px;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #FFFFFF;
+}

@@ -13,6 +13,7 @@ function moveUpShopsList(event)
 
     event.currentTarget.classList.toggle('rotated');
     shopsListBlock.classList.toggle('upped');
+    document.querySelector('.how-to-find').classList.toggle('upped');
 }
 
 document.addEventListener('DOMContentLoaded', e => {

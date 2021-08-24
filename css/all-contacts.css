@@ -93,6 +93,7 @@ img
 
         position: relative;
         z-index: 2;
+        top: 0;
 
         margin-top: -10vw;
 
@@ -100,15 +101,15 @@ img
         padding: 22px 0 0;
         border-radius: 40px 40px 0 0;
 
-        transition: top .6s, margin-top .3s;
+        transition: top .6s, margin-top .6s, border-radius .6s;
     }
 
     .all-shops.upped
     {
         /*margin-top: -94vw;*/
 
-        /*margin-top: 0;*/
-        /*top: 0;*/
+        margin-top: 0;
+        top: -69vh;
         border-radius: 0;
     }
 }
@@ -130,6 +131,13 @@ img
         margin-bottom: 30px;
     }
 }
+@media screen and (max-width: 450px)
+{
+    .title-button-wrapper
+    {
+        padding: 0 20px;
+    }
+}
 
 .all-shops__title
 {
@@ -141,7 +149,7 @@ img
 
     color: #000000;
 
-    margin-right: 40px;
+    margin-right: 15px;
 }
 @media screen and (max-width: 768px)
 {
@@ -195,6 +203,14 @@ img
         height: 27px;
     }
 }
+@media screen and (max-width: 340px)
+{
+    .up-shops-list
+    {
+        width: 16px;
+        height: 22px;
+    }
+}
 
 .shops-list
 {
@@ -234,6 +250,10 @@ img
         margin: 0 20px;
 
         flex-flow: row nowrap;
+    }
+    .shops-list .shop-item:first-child
+    {
+        padding-top: 0;
     }
 }
 @media screen and (max-width: 340px)
@@ -689,9 +709,10 @@ img
         line-height: 26px;
 
         margin-bottom: 10px;
+        margin-right: 10px;
     }
 
-    .shop-tel--look-more-wrapper .look-more
+    .shop-item:not(.shop-item.opened-soon) .shop-tel--look-more-wrapper .look-more
     {
         display: block;
         font-size: 22px;
@@ -706,7 +727,7 @@ img
         line-height: 20px;
     }
 
-    .shop-tel--look-more-wrapper .look-more
+    .shop-item:not(.shop-item.opened-soon) .shop-tel--look-more-wrapper .look-more
     {
         font-size: 16px;
         line-height: 19px;
@@ -716,14 +737,23 @@ img
 .how-to-find
 {
     margin: 78px 0;
+
+    transition: margin-top .6s;
 }
-@media screen and (max-width: 450px)
+@media screen and (max-width: 768px)
 {
-    .how-to-find
+    .how-to-find.upped
     {
-        display: none;
+        margin-top: -64vh;
     }
 }
+/*@media screen and (max-width: 450px)*/
+/*{*/
+/*    .how-to-find*/
+/*    {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
 
 .how-to-find__title
 {
@@ -737,6 +767,14 @@ img
 
     margin-bottom: 29px;
 }
+@media screen and (max-width: 450px)
+{
+    .how-to-find__title
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
 
 .how-to-find__text
 {
@@ -747,4 +785,12 @@ img
     line-height: 21px;
 
     color: #000000;
+}
+@media screen and (max-width: 450px)
+{
+    .how-to-find__text
+    {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }

@@ -7,5 +7,16 @@ document.addEventListener('DOMContentLoaded', e => {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            985: {
+                slidesPerView: 4,
+            },
+            745: {
+                slidesPerView: 3,
+            },
+            0: {
+                slidesPerView: 2,
+            }
+        }
     });
 })

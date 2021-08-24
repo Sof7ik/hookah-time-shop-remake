@@ -24,6 +24,21 @@ img
     margin: 0 auto;
 }
 
+.address-title-wrapper
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+@media screen and (max-width: 600px)
+{
+    .address-title-wrapper
+    {
+        flex-flow: column-reverse nowrap;
+    }
+}
+
 .shop-address-name
 {
     font-family: 'Roboto', sans-serif;
@@ -35,6 +50,26 @@ img
     color: #000000;
 
     margin-bottom: 24px;
+}
+@media screen and (max-width: 600px)
+{
+    .shop-address-name
+    {
+        width: 100%;
+        text-align: center;
+
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .shop-address-name
+    {
+        font-size: 21px;
+        line-height: 25px;
+        margin-bottom: 17px;
+    }
 }
 
 a.back-to-all-contacts
@@ -59,6 +94,25 @@ a.back-to-all-contacts
 
     outline: none;
 }
+@media screen and (max-width: 600px)
+{
+    a.back-to-all-contacts
+    {
+        margin: 10px 0 20px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    a.back-to-all-contacts
+    {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 18px;
+
+        padding-left: calc(9px + 11px);
+    }
+}
+
 
 a.back-to-all-contacts::before
 {
@@ -79,6 +133,14 @@ a.back-to-all-contacts::before
     background-size: cover;
 
     transition: left .3s;
+}
+@media screen and (max-width: 450px)
+{
+    a.back-to-all-contacts::before
+    {
+        width: 9px;
+        height: 14px;
+    }
 }
 
 @keyframes arrowToLeft
@@ -111,6 +173,21 @@ a.back-to-all-contacts:focus::before
 
     border: 3px solid #CDA236;
 }
+@media screen and (max-width: 768px)
+{
+    .yandex-maps
+    {
+        height: 55vh;
+        min-height: 200px;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .yandex-maps
+    {
+        margin-bottom: 22px;
+    }
+}
 
 .yandex-maps img
 {
@@ -118,6 +195,20 @@ a.back-to-all-contacts:focus::before
     height: 100%;
 
     object-fit: cover;
+}
+
+@media screen and (max-width: 600px)
+{
+    .detail-address-description
+    {
+        background-color: #343434;
+        padding: 20px 20px 30px;
+    }
+
+    .detail-address-description .container-1440
+    {
+        padding: 0;
+    }
 }
 
 .detail-shop-address
@@ -132,6 +223,18 @@ a.back-to-all-contacts:focus::before
 
     color: #000000;
 }
+@media screen and (max-width: 600px)
+{
+    .detail-shop-address
+    {
+        margin-top: 0;
+        margin-bottom: 30px;
+        color: #fff;
+
+        font-size: 25px;
+        line-height: 30px;
+    }
+}
 
 .description-address-card
 {
@@ -139,15 +242,51 @@ a.back-to-all-contacts:focus::before
     padding: 39px 34px 35px;
 
     display: flex;
-    flex-flow:  row wrap;
+    flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: flex-start;
+}
+@media screen and (max-width: 768px)
+{
+    .description-address-card
+    {
+        flex-flow: row wrap;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .description-address-card
+    {
+        padding: 0;
+    }
 }
 
 /* контейнер для телефона и социальных ссылок */
 .telephone-social-wrapper
 {
     margin-right: 87px;
+}
+@media screen and (max-width: 1024px)
+{
+    .telephone-social-wrapper
+    {
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .telephone-social-wrapper
+    {
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .telephone-social-wrapper
+    {
+        order: 2;
+        margin-top: 36px;
+    }
 }
 
 /* телефон магазина */
@@ -162,6 +301,24 @@ a.back-to-all-contacts:focus::before
     line-height: 49px;
 
     color: #FFFFFF;
+
+    white-space: nowrap;
+}
+@media screen and (max-width: 768px)
+{
+    .shop-phone
+    {
+        font-size: 33px;
+        line-height: 38px;
+    }
+}
+@media screen and (max-width: 390px)
+{
+    .shop-phone
+    {
+        font-size: 28px;
+        line-height: 34px;
+    }
 }
 
 /* список соц сетей */
@@ -173,6 +330,33 @@ a.back-to-all-contacts:focus::before
 
     display: grid;
     grid-template-columns: repeat(6, minmax(min-content, max-content));
+}
+@media screen and (max-width: 768px)
+{
+    .description-address-card .social-list
+    {
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .description-address-card .social-list
+    {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 390px)
+{
+    .description-address-card .social-list
+    {
+    }
+}
+@media screen and (max-width: 319px)
+{
+    .description-address-card .social-list
+    {
+        grid-template-columns: repeat(4, minmax(min-content, max-content));
+    }
 }
 
 .description-address-card .social-list .social-item a
@@ -198,20 +382,61 @@ a.back-to-all-contacts:focus::before
     height: 35px;
     object-fit: contain;
 }
-
-/* список станций метро */
-.metro-wrapper
+@media screen and (max-width: 390px)
 {
-    list-style-type: none;
-
-    margin-right: 179px;
+    .description-address-card .social-list .social-item a img
+    {
+        width: 27px;
+        height: 27px;
+    }
 }
 
-.metro-wrapper .metro-item
+.metro-time-wrapper
+{
+    width: 100%;
+    max-width: 650px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+@media screen and (max-width: 768px)
+{
+    .metro-time-wrapper
+    {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .metro-time-wrapper
+    {
+        margin-top: 0px;
+    }
+}
+
+/* список станций метро */
+.description-address-card .metro-wrapper
+{
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    /*margin-right: 179px;*/
+}
+@media screen and (max-width: 1280px)
+{
+    .description-address-card .metro-wrapper
+    {
+        margin-right: 30px;
+    }
+}
+
+.description-address-card .metro-wrapper .metro-item
 {
     margin-bottom: 6px;
 }
-.metro-wrapper .metro-item:last-child
+.description-address-card .metro-wrapper .metro-item:last-child
 {
     margin-bottom: 0;
 }
@@ -259,7 +484,7 @@ a.back-to-all-contacts:focus::before
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 20px;
 
     color: #FFFFFF;
 
@@ -275,8 +500,8 @@ a.back-to-all-contacts:focus::before
 
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
+    /*transform: translateY(-50%);*/
 
     background-image: url('../img/clock.svg');
     background-position: center;
@@ -317,6 +542,7 @@ a.back-to-all-contacts:focus::before
 
     position: absolute;
     left: 0;
+    /*top: 0;*/
     top: 50%;
     transform: translateY(-50%);
 
@@ -334,6 +560,13 @@ a.back-to-all-contacts:focus::before
     grid-gap: 3px;
 
     margin-top: 64px;
+}
+@media screen and (max-width: 450px)
+{
+    .payment-methods
+    {
+        margin-top: 36px;
+    }
 }
 
 .shop-photos
@@ -355,7 +588,19 @@ a.back-to-all-contacts:focus::before
     border: 3px solid #fff;
     margin: 0 auto;
 
+    width: 272px;
+    height: 272px;
+    object-fit: cover;
+
     /*width: 100%;*/
+}
+@media screen and (max-width: 1220px)
+{
+    .shop-photos .swiper-wrapper .swiper-slide img
+    {
+        width: 220px;
+        height: 220px;
+    }
 }
 
 .swiper-button-prev,

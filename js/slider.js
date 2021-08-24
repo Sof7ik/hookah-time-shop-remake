@@ -1,22 +1,29 @@
 document.addEventListener('DOMContentLoaded', e => {
-    const swiper = new Swiper('.swiper-container', {
-        speed: 400,
-        // spaceBetween: 23,
-        slidesPerView: 4,
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-            985: {
-                slidesPerView: 4,
+
+    setTimeout( () => {
+        const swiper = new Swiper('.swiper-container', {
+            speed: 400,
+            slidesPerView: 'auto',
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            745: {
-                slidesPerView: 3,
-            },
-            0: {
-                slidesPerView: 2,
+            breakpoints: {
+                985: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
+                },
+                746: {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                },
+                0: {
+                    spaceBetween: 25,
+                    slidesPerView: 'auto',
+                    observeParents: true,
+                    observer: true
+                }
             }
-        }
-    });
+        });
+    }, 500)
 })

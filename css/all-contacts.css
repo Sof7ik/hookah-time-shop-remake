@@ -24,6 +24,14 @@ img
     margin: 0 auto;
 }
 
+@media screen and (max-width: 768px)
+{
+    .map-shops-wrapper .container-1440
+    {
+        padding: 0;
+    }
+}
+
 .all-addresses__title
 {
     font-family: 'Roboto', sans-serif;
@@ -36,6 +44,17 @@ img
 
     margin-bottom: 28px;
 }
+@media screen and (max-width: 768px)
+{
+    .all-addresses__title
+    {
+        font-size: 21px;
+        line-height: 25px;
+
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
 
 .yandex-maps
 {
@@ -43,6 +62,15 @@ img
     height: 529px;
 
     border: 3px solid #CDA236;
+}
+@media screen and (max-width: 768px)
+{
+    .yandex-maps
+    {
+        /*height: 572px;*/
+        height: 69vh;
+        border: none;
+    }
 }
 
 .yandex-maps img
@@ -57,6 +85,51 @@ img
 {
     margin-top: 45px;
 }
+@media screen and (max-width: 768px)
+{
+    .all-shops
+    {
+        width: 100%;
+
+        position: relative;
+        z-index: 2;
+
+        margin-top: -10vw;
+
+        background-color: #343434;
+        padding: 22px 0 0;
+        border-radius: 40px 40px 0 0;
+
+        transition: top .6s, margin-top .3s;
+    }
+
+    .all-shops.upped
+    {
+        /*margin-top: -94vw;*/
+
+        /*margin-top: 0;*/
+        /*top: 0;*/
+        border-radius: 0;
+    }
+}
+
+.title-button-wrapper
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 50px;
+}
+@media screen and (max-width: 768px)
+{
+    .title-button-wrapper
+    {
+        padding: 0 35px 0 25px;
+        margin-bottom: 30px;
+    }
+}
 
 .all-shops__title
 {
@@ -68,7 +141,59 @@ img
 
     color: #000000;
 
-    margin-bottom: 50px;
+    margin-right: 40px;
+}
+@media screen and (max-width: 768px)
+{
+    .all-shops__title
+    {
+        font-size: 26px;
+        line-height: 30px;
+
+        color: #FFFFFF;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .all-shops__title
+    {
+        font-size: 21px;
+        line-height: 25px;
+    }
+}
+
+.up-shops-list
+{
+    display: none;
+
+    transform: rotate(90deg);
+    filter: invert(100%);
+
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    background-image: url('../img/back-icon.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transition: transform .3s;
+}
+.up-shops-list.rotated
+{
+    transform: rotate(270deg);
+}
+
+@media screen and (max-width: 768px)
+{
+    .up-shops-list
+    {
+        display: block;
+
+        width: 17px;
+        height: 27px;
+    }
 }
 
 .shops-list
@@ -98,10 +223,56 @@ img
 {
     margin-bottom: 0;
 }
-
-.shops-list .shop-item:hover
+@media screen and (max-width: 768px)
 {
-    background-color: #CDA236;
+    .shops-list .shop-item
+    {
+        padding: 22px 0 33px;
+        border-bottom: 1px solid #505050;
+        border-radius: 0;
+
+        margin: 0 20px;
+
+        flex-flow: row nowrap;
+    }
+}
+@media screen and (max-width: 340px)
+{
+    .shops-list .shop-item
+    {
+        flex-flow: column nowrap;
+        align-items: center;
+        padding: 15px 0;
+    }
+}
+
+
+@media screen and (min-width: 769px)
+{
+    .shops-list .shop-item:not(.shops-list .shop-item.opened-soon):hover,
+    .shops-list .shop-item:not(.shops-list .shop-item.opened-soon):focus
+    {
+        background-color: #CDA236;
+    }
+}
+
+.shops-list .shop-item.opened-soon
+{
+    background-color: #D1D1D1;
+}
+@media screen and (max-width: 768px)
+{
+    .shops-list .shop-item.opened-soon
+    {
+        margin: 0;
+        padding: 22px 20px 43px;
+        border-bottom: 1px solid #B5B5B5;
+    }
+}
+
+.shops-list .shop-item.opened-soon *
+{
+    color: #000;
 }
 
 .shops-list .shop-item a
@@ -118,6 +289,56 @@ img
 
     margin-right: 56px;
 }
+@media screen and (max-width: 1170px)
+{
+    .shop-avatar
+    {
+        width: 220px;
+        height: 220px;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .shop-avatar
+    {
+        width: 170px;
+        height: 170px;
+
+        margin-right: 35px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .shop-avatar
+    {
+        width: 100px;
+        height: 100px;
+
+        margin-right: 23px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .shop-avatar
+    {
+        width: 79px;
+        height: 79px;
+
+        margin-right: 23px;
+    }
+}
+@media screen and (max-width: 340px)
+{
+    .shop-avatar
+    {
+        margin-bottom: 20px;
+    }
+}
+
+.shop-contacts
+{
+    flex-grow: 1;
+}
 
 .shop-address
 {
@@ -131,10 +352,41 @@ img
 
     color: #FFFFFF;
 }
+@media screen and (max-width: 1170px)
+{
+    .shop-address
+    {
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .shop-address
+    {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .shop-address
+    {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .shop-address
+    {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
 
 .shop-address a
 {
     color: inherit;
+    display: block;
 }
 
 .shop-address a::before
@@ -167,55 +419,18 @@ img
     width: 100%;
     max-width: 700px;
 }
-
-/* список станций метро */
-.metro-wrapper
+@media screen and (max-width: 768px)
 {
-    list-style-type: none;
+    .times-metro
+    {
+        margin-top: 14px;
+    }
 
-    margin-right: 179px;
-}
-
-.metro-wrapper .metro-item
-{
-    margin-bottom: 6px;
-}
-.metro-wrapper .metro-item:last-child
-{
-    margin-bottom: 0;
-}
-
-.metro-address
-{
-    position: relative;
-
-    padding-left: calc(20px + 7px);
-
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 21px;
-
-    color: #FFFFFF;
-}
-
-.metro-address::before
-{
-    content: '';
-
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: 20px;
-    height: 12px;
-
-    background-image: url('../img/metro-icon.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    .times-metro .contacts
+    {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 .opened-time
@@ -233,6 +448,11 @@ img
     color: #FFFFFF;
 
     margin-bottom: 7px;
+}
+
+.shops-list .shop-item.opened-soon .opened-time
+{
+    text-transform: uppercase;
 }
 
 .opened-time::before
@@ -294,10 +514,148 @@ img
     background-repeat: no-repeat;
 }
 
-a.shop-tel
+/* список станций метро */
+.metro-wrapper
+{
+    list-style-type: none;
+}
+
+.metro-wrapper .metro-item
+{
+    margin-bottom: 6px;
+}
+.metro-wrapper .metro-item:last-child
+{
+    margin-bottom: 0;
+}
+
+.metro-address
+{
+    position: relative;
+
+    padding-left: calc(20px + 7px);
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #FFFFFF;
+}
+
+.metro-address::before
+{
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 20px;
+    height: 20px;
+
+    background-image: url('../img/metro-icon.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px)
+{
+    .opened-time,
+    .shop-mail
+    {
+        padding-left: calc(15px + 7px);
+
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .opened-time::before
+    {
+        width: 15px;
+        height: 15px;
+    }
+
+    .shop-mail::before
+    {
+        width: 15px;
+        height: 12px;
+    }
+
+    .metro-address
+    {
+        font-size: 15px;
+        line-height: 19px;
+
+        padding-left: calc(15px + 7px);
+    }
+    .metro-address::before
+    {
+        width: 15px;
+        height: 12px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .opened-time,
+    .shop-mail
+    {
+        padding-left: calc(11px + 4px);
+
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .opened-time
+    {
+        margin-bottom: 3px;
+    }
+    .opened-time::before
+    {
+        width: 11px;
+        height: 11px;
+    }
+
+    .shop-mail::before
+    {
+        width: 11px;
+        height: 8px;
+    }
+
+    .metro-address
+    {
+        font-size: 9px;
+        line-height: 13px;
+
+        padding-left: calc(10px + 4px);
+    }
+    .metro-address::before
+    {
+        width: 10px;
+        height: 6px;
+    }
+}
+
+.shops-list .shop-item.opened-soon .opened-time::before,
+.shops-list .shop-item.opened-soon .shop-mail::before
+{
+    filter: invert(100%);
+}
+
+.shop-tel--look-more-wrapper
+{
+    margin-top: 42px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.shop-tel--look-more-wrapper .shop-tel
 {
     display: block;
-    margin-top: 42px;
 
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -306,4 +664,87 @@ a.shop-tel
     line-height: 42px;
 
     color: #FFFFFF;
+}
+
+.shop-tel--look-more-wrapper .look-more
+{
+    display: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+
+    color: #CDA236;
+}
+@media screen and (max-width: 768px)
+{
+    .shop-tel--look-more-wrapper
+    {
+        margin-top: 10px;
+    }
+
+    .shop-tel--look-more-wrapper .shop-tel
+    {
+        font-size: 22px;
+        line-height: 26px;
+
+        margin-bottom: 10px;
+    }
+
+    .shop-tel--look-more-wrapper .look-more
+    {
+        display: block;
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .shop-tel--look-more-wrapper .shop-tel
+    {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .shop-tel--look-more-wrapper .look-more
+    {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.how-to-find
+{
+    margin: 78px 0;
+}
+@media screen and (max-width: 450px)
+{
+    .how-to-find
+    {
+        display: none;
+    }
+}
+
+.how-to-find__title
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+    color: #000000;
+
+    margin-bottom: 29px;
+}
+
+.how-to-find__text
+{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
 }

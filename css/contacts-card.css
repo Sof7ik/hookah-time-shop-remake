@@ -354,6 +354,8 @@ a.back-to-all-contacts:focus::before
 {
     border: 3px solid #fff;
     margin: 0 auto;
+
+    /*width: 100%;*/
 }
 
 .swiper-button-prev,

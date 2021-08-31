@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', e => {
-
     setTimeout( () => {
         const swiper = new Swiper('.swiper-container', {
             speed: 400,
